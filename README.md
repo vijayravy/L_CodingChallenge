@@ -1,2 +1,3 @@
-# L_CodingChallenge
 Coding Challenge
+
+For the 3rd queston , I tried with Unix first and found it to be very quick work because of the "uniq -c" command to count occurrences of duplicate lines.... 
