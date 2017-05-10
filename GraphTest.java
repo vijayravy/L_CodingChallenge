@@ -38,8 +38,9 @@ public class GraphTest {
 		System.out.println("All the non-duplicate Nodes in the graph are : ");
 		System.out.println();
 		walkGraph(treeRootGNode, " ", printUniqueList);
-		// printPath(treeRootGNode,root,child);
 		System.out.println();
+		System.out.println();
+		System.out.println("Paths (A) : ");
 		System.out.println();
 		paths(treeRootGNode);
 	}
@@ -69,8 +70,6 @@ public class GraphTest {
 		ArrayList<ArrayList<GNode>> allPaths = new ArrayList<ArrayList<GNode>>();
 		allPaths.addAll(allPaths(node));
 		
-		System.out.println("Paths (A) : ");
-		System.out.println();
 		for (ArrayList<GNode> path: allPaths) {
 			
 			System.out.print("{");
@@ -99,7 +98,7 @@ public class GraphTest {
 		else {
 			ArrayList<GNode> temp2Path = new ArrayList<GNode>();
 			temp2Path.add(node);
-			tempPath.add(thisPath);
+			tempPath.add(temp2Path);
 		}
 		
 		
