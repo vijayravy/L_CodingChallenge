@@ -1,0 +1,1 @@
+echo `cat WordCount.txt` | tr '[:upper:]' '[:lower:]' | tr -sc '[:alnum:]''[\'''] '[\n*]' | sort | uniq -c 
