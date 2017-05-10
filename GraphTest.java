@@ -86,24 +86,24 @@ public class GraphTest {
 	
 	private static ArrayList<ArrayList<GNode>> allPaths (GNode node) {
 		ArrayList<GNode> children = new ArrayList<GNode>(node.getChildren());
-		ArrayList<ArrayList<GNode>> currentPaths = new ArrayList<ArrayList<GNode>>();  
+		ArrayList<ArrayList<GNode>> tempPath = new ArrayList<ArrayList<GNode>>();  
 		if (children.size()!=0) {
 			for (GNode child : children) {
-				currentPaths.addAll(allPaths(child));
+				tempPath.addAll(allPaths(child));
 			}
-			for (ArrayList<GNode> paths: currentPaths) {
+			for (ArrayList<GNode> paths: tempPath) {
 				//System.out.println(paths.toString());
 				paths.add(0, node);
 			}
 		}
 		else {
-			ArrayList<GNode> thisPath = new ArrayList<GNode>();
-			thisPath.add(node);
-			currentPaths.add(thisPath);
+			ArrayList<GNode> temp2Path = new ArrayList<GNode>();
+			temp2Path.add(node);
+			tempPath.add(thisPath);
 		}
 		
 		
-		return currentPaths;
+		return tempPath;
 	
 	}
 	
